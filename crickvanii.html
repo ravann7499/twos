@@ -1,1 +1,262 @@
-error
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>TG:-@streamxcricket</title>
+    <style>
+        :root {
+            box-sizing: border-box;
+            padding-top: env(safe-area-inset-top, 0px);
+            padding-bottom: env(safe-area-inset-bottom, 0px);
+            --bg1: #e8f4fd;
+            --bg2: #f6ecff;
+            --card: #ffffff;
+            --text: #14202b;
+            --muted: #546270;
+            --border: #dbe6ef;
+            --accent: #229ed9;
+            --accent2: #1b7fb0;
+            --live: #e5383b;
+            --shadow: 0 20px 50px rgba(34, 158, 217, .18);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root:not([data-theme="light"]) {
+                --bg1: #0b1620;
+                --bg2: #1a1030;
+                --card: #142230;
+                --text: #eef4f9;
+                --muted: #9db0c0;
+                --border: #243648;
+                --shadow: 0 20px 50px rgba(0, 0, 0, .5);
+            }
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0
+        }
+
+        body {
+            font-family: "Segoe UI", "Noto Sans Devanagari", system-ui, -apple-system, Roboto, Arial, sans-serif;
+            background: linear-gradient(135deg, var(--bg1), var(--bg2));
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 460px;
+            text-align: center;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 36px 26px 30px;
+            box-shadow: var(--shadow);
+            animation: rise .6s ease both;
+        }
+
+        @keyframes rise {
+            from {
+                opacity: 0;
+                transform: translateY(18px)
+            }
+
+            to {
+                opacity: 1;
+                transform: none
+            }
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: color-mix(in srgb, var(--live) 12%, transparent);
+            color: var(--live);
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 1px;
+            padding: 6px 14px;
+            border-radius: 999px;
+        }
+
+        .dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: var(--live);
+            animation: pulse 1.4s infinite
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(229, 56, 59, .6)
+            }
+
+            100% {
+                box-shadow: 0 0 0 10px rgba(229, 56, 59, 0)
+            }
+        }
+
+        .icon {
+            width: 84px;
+            height: 84px;
+            margin: 22px auto 8px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #37aee2, #1e96c8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 24px rgba(34, 158, 217, .4);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            50% {
+                transform: translateY(-6px)
+            }
+        }
+
+        .icon svg {
+            width: 44px;
+            height: 44px;
+            fill: #fff;
+            margin-right: 3px
+        }
+
+        h1 {
+            font-size: 24px;
+            line-height: 1.35;
+            margin: 14px 0 10px
+        }
+
+        h1 .en {
+            display: block;
+            font-size: 19px;
+            font-weight: 600;
+            color: var(--accent);
+            margin-top: 6px
+        }
+
+        p {
+            color: var(--muted);
+            font-size: 16px;
+            line-height: 1.7;
+            margin: 0 0 26px
+        }
+
+        p b {
+            color: var(--text)
+        }
+
+        .divider {
+            height: 1px;
+            background: var(--border);
+            margin: 0 auto 18px;
+            width: 60%
+        }
+
+        p.en {
+            font-size: 15px;
+            margin-bottom: 26px
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            padding: 16px 20px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #37aee2, #1e96c8);
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 700;
+            box-shadow: 0 8px 20px rgba(34, 158, 217, .4);
+            transition: transform .15s ease, box-shadow .15s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 26px rgba(34, 158, 217, .5)
+        }
+
+        .btn:active {
+            transform: scale(.98)
+        }
+
+        .btn svg {
+            width: 24px;
+            height: 24px;
+            fill: #fff
+        }
+
+        .btn span {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.25
+        }
+
+        .btn small {
+            font-size: 13px;
+            font-weight: 500;
+            opacity: .9
+        }
+
+        .note {
+            margin-top: 18px;
+            font-size: 13px;
+            color: var(--muted)
+        }
+    </style>
+</head>
+
+<body>
+    <main class="card">
+        <span class="badge"><span class="dot"></span>LIVE UPDATE</span>
+
+        <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+                <path
+                    d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z" />
+            </svg>
+        </div>
+
+        <h1>Live Streaming Links बदल गए हैं!<span class="en">Live Streaming Links Have Changed!</span></h1>
+        <p>
+            हमने सभी <b>live streaming links</b> बदल दिए हैं।<br>
+            नए links देखने के लिए हमारे <b>Telegram Channel</b> को जॉइन करें, सभी links वहीं डाल दिए गए हैं।
+        </p>
+        <div class="divider"></div>
+        <p class="en">
+            We have updated all <b>live streaming links</b>.<br>
+            Please join our <b>Telegram Channel</b> to get the new links. All links have been posted there.
+        </p>
+
+        <a class="btn" id="tg" href="https://telegram.me/+vszgT_EEsf81Zjhl" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24">
+                <path
+                    d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z" />
+            </svg>
+            <span>Telegram Channel जॉइन करें<small>Join our Telegram Channel</small></span>
+        </a>
+
+        <div class="note">जॉइन करने के बाद नए links channel में मिल जाएंगे।<br>You will find the new links in the
+            channel after joining.</div>
+    </main>
+</body>
+
+</html>
